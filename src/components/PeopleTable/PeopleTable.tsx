@@ -58,13 +58,13 @@ export const PeopleTable: React.FC = () => {
         </tr>
       </thead>
       <tbody>
-        {people.map((person, index) => {
+        {people.map(person => {
           const { name, sex, born, died, motherName, fatherName, slug } =
             person;
 
           return (
             <tr
-              key={`person-${index}`}
+              key={slug}
               className={classNames({
                 'has-background-warning': pathname === `/people/${slug}`,
               })}

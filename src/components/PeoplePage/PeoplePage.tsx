@@ -31,7 +31,7 @@ export const PeoplePage: React.FC = () => {
       <h1 className="title">People Page</h1>
       <div className="block">
         <div className="box table-container">
-          {(loader && <Loader />) || peopleMarkup}
+          {loader ? <Loader /> : peopleMarkup}
         </div>
       </div>
     </>
